@@ -1,23 +1,16 @@
 # Test results
 
-Date of project generation: 2026-10-24
+## Automated checks performed for this archive
+- JavaScript syntax checks: see generation validation; rerun before deployment if files are edited.
+- Question bank preserved from the previous Mental Health Disorders project; validation checks confirm 40 unique question IDs, four options per question, and valid answer keys.
+- Four distinct HTTPS offer URLs retained from the original `config.js`.
+- Updated Level 2 result action is configured to retry Level 1 below 70%, and start Level 2 at 70% or above.
+- Promotional banner markup is on the Results screen; offer section is no longer a separate always-visible page section.
 
-## Automated source/data checks performed
+## Not performed
+- Full manual browser interaction and visual testing
+- Testing on real mobile devices
+- Verification of the live Gumroad product pages
+- GitHub Pages deployment and post-deployment tests
 
-- PASS: Parsed 40 question records from the supplied prompt.
-- PASS: IDs are exactly `q1` through `q40`, unique and in source order.
-- PASS: Each question has four options labelled A, B, C, D.
-- PASS: Each supplied answer key matches one of its question's options.
-- PASS: Level partition is q1–q20 and q21–q40.
-- PASS: Four distinct commercial URLs are configured exactly as supplied.
-- PASS: Required eight project files were generated.
-
-## Not yet verified
-
-- NOT RUN: Browser-based interaction tests, accessibility review, and responsive visual checks.
-- NOT RUN: Runtime JavaScript console checks in an actual browser.
-- NOT RUN: Native share and fallback behavior on real devices/browsers.
-- NOT RUN: Actual Gumroad destinations and product contents; URLs are reproduced from the supplied prompt, not independently verified.
-- NOT RUN: GitHub Pages deployment; no repository was created or modified.
-
-This report intentionally does not claim the unperformed manual or deployment tests passed.
+Do not treat the items above as passed until tested in the target browser and published site.

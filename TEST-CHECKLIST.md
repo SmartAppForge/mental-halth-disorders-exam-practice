@@ -1,29 +1,20 @@
 # Test checklist
 
-## Question bank
-- [ ] Exactly 40 questions, in source order.
-- [ ] Level 1 contains q1–q20.
-- [ ] Level 2 contains q21–q40.
-- [ ] IDs q1–q40 are unique.
-- [ ] Every question has options A, B, C, and D.
-- [ ] Every answer key matches one of the supplied options.
-- [ ] No question or answer explanation has been invented.
+## Automated checks
+- [ ] JavaScript syntax check for `config.js`, `questions.js`, and `app.js`
+- [ ] Exactly 40 unique questions, q1–q40
+- [ ] 20 questions per level; four options and a valid answer key per question
+- [ ] Four distinct HTTPS commercial URLs
 
-## Functionality
-- [ ] Home screen loads.
-- [ ] Level 1 can start.
-- [ ] An unanswered question cannot be submitted.
-- [ ] Previous/next navigation preserves selected answers.
-- [ ] Final score matches the recorded answers.
-- [ ] Answer review shows selected and correct answers.
-- [ ] Level 2 remains locked until the configured score threshold is met.
-- [ ] Share button works or presents a fallback.
-- [ ] All four commercial buttons open the corresponding supplied URLs in a new tab.
-- [ ] No blocking JavaScript errors.
-
-## Publication and responsive behavior
-- [ ] `index.html` is at repository root.
-- [ ] All eight required files are present.
-- [ ] Layout works on desktop and mobile.
-- [ ] GitHub Pages deployment succeeds.
-- [ ] Retest the published site and share behavior after deployment.
+## Browser checks after deployment
+- [ ] Home screen loads and starts Level 1
+- [ ] One answer per question is selected and saved
+- [ ] Previous/Next navigation and progress indicator work
+- [ ] Level 1 score is correct for known answer combinations
+- [ ] Below 70%, results action says Retry Level 1 and restarts Level 1
+- [ ] At or above 70%, results action starts Level 2
+- [ ] Level 2 score and answer review work
+- [ ] Sharing works or fallback is offered
+- [ ] Commercial banner appears on Results only, not Home or Quiz
+- [ ] Each offer button opens the matching supplied Gumroad page
+- [ ] Layout is usable on desktop and mobile

@@ -14,7 +14,7 @@ window.APP_CONFIG = {
       "id": "app",
       "label": "Get the Practice App",
       "description": "Access the Mental Health Disorders practice app.",
-      "url": "https://ebookservice.gumroad.com/l/iqxlnj"
+      "url": "https://ebookservice.gumroad.com/l/wizck"
     },
     {
       "id": "ebook",

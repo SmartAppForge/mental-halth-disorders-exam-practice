@@ -1,43 +1,30 @@
-# Mental Health DisordersExam Practice — v1.0
+# Mental Health Disorders Exam Practice — v1.0
 
-A standalone, responsive HTML/CSS/JavaScript educational practice app for GitHub Pages. It uses the 40 questions supplied in the project prompt, preserving their order, wording, answer options, and supplied answer keys. This is independent practice material, not an official examination or endorsement.
-
-## Project identity
-
-- App ID / recommended repository: `mental-halth-disorders-exam-practice` (spelling preserved exactly as supplied)
-- Domain: NCLEX and Nursing Exam Practice
-- Audience: Mental Health Disorders and Nursing Student
-- Interface language: English
+A standalone, responsive HTML/CSS/JavaScript practice app for nursing students.
 
 ## Files
-
-- `index.html` — application structure
-- `styles.css` — responsive styling
-- `config.js` — app identity, Level 2 unlock threshold, and four commercial links
-- `questions.js` — complete 40-question bank
-- `app.js` — navigation, answer state, scoring, review, sharing, and unlock logic
-- `TEST-CHECKLIST.md` — validation checklist
-- `TEST-RESULTS.md` — checks performed and outstanding manual tests
+- `index.html` — app interface
+- `styles.css` — responsive layout and results-page offer banner
+- `config.js` — app settings, 70% Level 2 threshold, and four supplied Gumroad URLs
+- `questions.js` — the original 40 questions and answer keys from the supplied project
+- `app.js` — navigation, scoring, answer review, sharing, offers, and level unlocking
+- `TEST-CHECKLIST.md` — manual validation checklist
+- `TEST-RESULTS.md` — automated checks and tests still outstanding
 
 ## Run locally
+Open `index.html` in a modern browser, or serve this folder using a local static HTTP server.
 
-Open `index.html` in a modern browser. For the most representative test of sharing and browser storage, use a local static server or GitHub Pages (native share and clipboard support vary by browser and security context). No build step or package installation is required.
+## Publish on GitHub Pages
+1. Create a new repository named `mental-halth-disorders-exam-practice`.
+2. Upload all eight files to the repository root (not a nested project folder).
+3. Commit the changes.
+4. In **Settings → Pages**, select the deployment source/branch and root folder as appropriate.
+5. Wait for deployment and test the published URL.
 
-## Level 2 unlock rule
+## Level 2 behavior
+Level 2 is available after a Level 1 score at or above the configured `minimumPercent` (70% by default). Below the threshold, the results-page action becomes **Retry Level 1**. The threshold is configured in `config.js`. Any local-storage based progress is device/browser-specific and is not server-verified.
 
-By default, Level 2 unlocks when the user scores at least 70% on Level 1. Change `minimumPercent` in `config.js` to adjust the threshold. The result is stored in browser local storage for this device/browser; this is not server-side verification and can be cleared or changed by the user.
+## Offers
+The four supplied URLs are preserved in `config.js`. The colored offer banner is displayed on the results screen, not during Home or Quiz.
 
-## Commercial links
-
-The four supplied links are configured in `config.js` exactly as provided in the prompt. The app does not independently verify Gumroad product availability or product contents.
-
-## Publish to GitHub Pages
-
-1. Sign in to GitHub and create a **new, separate** repository named `mental-halth-disorders-exam-practice`. Do not reuse or modify another application's repository.
-2. Upload all eight project files to the repository root. Confirm `index.html` is at the root, not inside a nested project folder.
-3. Open the repository's **Settings → Pages**.
-4. Under the build/deployment source, select **Deploy from a branch**, choose the default branch (usually `main`) and the `/ (root)` folder, then save.
-5. Wait for GitHub Pages to finish deployment. Open the Pages URL shown in Settings → Pages.
-6. Test the published URL on desktop and mobile, including answer selection, scoring, Level 2 unlock, and share fallback.
-
-No repository is created or modified by generating these files.
+No repository was created, modified, or published as part of generating this archive.
